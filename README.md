@@ -1,6 +1,6 @@
 # laptop-tool
 
-Usage: ./laptop-tool [OPTION]
+Usage: ./laptop-tool.sh [OPTION]
 
   --boost-off
 
