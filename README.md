@@ -10,4 +10,12 @@ Usage: ./laptop-tool.sh [OPTION]
 
   --ondemand
 
-  --info
+  --cpu-info
+ 
+  --ip-info
+  
+  --wlan
+  
+  --wlan-start
+  
+  --update
