@@ -1,7 +1,7 @@
 #!/bin/bash
 
 info_txt(){
-	echo 'Usage: ./laptop-tool [OPTION]
+	echo 'Usage: ./laptop-tool.sh [OPTION]
 
   --boost-off
 
