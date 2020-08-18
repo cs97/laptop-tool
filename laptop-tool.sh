@@ -29,6 +29,8 @@ case $1 in
 
 	"--cpu-info")
 		echo ""
+		lscpu | grep "Model name:"	
+		echo ""
 		[ $(cat /sys/devices/system/cpu/cpufreq/boost) == 1 ] && echo "BOOST ON" || echo "BOOST OFF"
 		echo ""
 		lscpu | grep "CPU MHz"
