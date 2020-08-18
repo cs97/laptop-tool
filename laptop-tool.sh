@@ -41,6 +41,11 @@ case $1 in
 
 	"--help")
 		info_txt;;
+	"--update")
+		mv laptop-tool.sh laptop-tool.old
+		wget https://raw.githubusercontent.com/leftside97/laptop-tool/master/laptop-tool.sh
+		chmod +x laptop-tool.sh;;
+
 
 	*) echo "Try 'laptop-tool --help' for more information.";;
 
