@@ -49,10 +49,10 @@ case $1 in
 	"--wlan")
 		echo "key:"
 		wpa_passphrase $2 >> /etc/wpa_supplicant/wpa_supplicant.conf
-		/etc/init.d/wpa_supplicant start
-		rc-update add wpa_supplicant default;;
 	"--wlan-start")
 		/etc/init.d/wpa_supplicant start;;
+	"--wlan-enable")
+		rc-update add wpa_supplicant default;;
 
 	"--help")
 		info_txt;;
