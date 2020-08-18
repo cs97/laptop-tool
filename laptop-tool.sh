@@ -11,7 +11,9 @@ info_txt(){
 
   --ondemand
 
-  --info
+  --cpu-info
+ 
+  --ip-info
 '
 }
 
@@ -25,7 +27,7 @@ case $1 in
 	"--ondemand")
 		cpupower frequency-set -g ondemand;;
 
-	"--info")
+	"--cpu-info")
 		echo ""
 		[ $(cat /sys/devices/system/cpu/cpufreq/boost) == 1 ] && echo "BOOST ON" || echo "BOOST OFF"
 		echo ""
@@ -34,6 +36,8 @@ case $1 in
 		lscpu | grep "CPU min MHz"
 		echo ""
 		cpupower frequency-info;;
+	"--ip-info")
+		ip a | grep "inet ";;
 
 	"--help")
 		info_txt;;
